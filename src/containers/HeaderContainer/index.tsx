@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 import favorite from './favorite_border_black_24dp.svg';
 import signin from './perm_identity_black_24dp.svg';
 import cart from './shopping_cart_black_24dp.svg';
-import help from './help.svg';
+import support from './contact_support_black_24dp.svg';
+import list from './list_white_24dp.svg';
+import dropdown from './arrow_drop_down_black_24dp.svg';
 
 type Props = {};
 
@@ -55,10 +57,10 @@ const Header: React.FC<Props> = () => {
                 </div>
                 <div className='customer-link'>
                   <Link to='/'>
-                    <span>
+                    <div>
                       <img src={signin} alt='signin' />
-                    </span>
-                    <span>Sign In</span>
+                      <span>Sign In</span>
+                    </div>
                   </Link>
                 </div>
                 <div className='header-cart'>
@@ -79,32 +81,44 @@ const Header: React.FC<Props> = () => {
           </div>
         </div>
       </div>
-
       <div className='main-menu'>
         <div className='container'>
           <div className='row'>
             <div className='menu-left'>
-              <ul>
+              <div className='menu-icons'>
+                <img src={list} alt='wishlist' />
+              </div>
+              <ul className='ul-menu'>
                 <li>
-                  <Link to='/'>New In</Link>
+                  {/* <img src={list} alt='wishlist' /> */}
+                  <Link to='/'>Mobile Phones</Link>
                 </li>
                 <li className='max-left'>
-                  <Link to='/'>Must Have</Link>
+                  <Link to='/'>Laptops & Tablets</Link>
                 </li>
                 <li className='max-left'>
-                  <Link to='/'>Trend</Link>
+                  <Link to='/'>Televisons</Link>
                 </li>
                 <li className='max-left'>
-                  <Link to='/'>Themes Demos</Link>
+                  <Link to='/'>Audio & Video</Link>
                 </li>
                 <li className='max-left'>
-                  <Link to='/'>Child Themes</Link>
+                  <Link to='/'>PC & Accessories</Link>
                 </li>
                 <li className='max-left'>
-                  <Link to='/'>Pages</Link>
+                  <Link to='/'>Gaming</Link>
                 </li>
                 <li className='max-left'>
-                  <Link to='/'>BuyTheme</Link>
+                  <Link to='/'>Home Appliances</Link>
+                </li>
+                <li className='max-left'>
+                  <Link to='/'>Cameras</Link>
+                </li>
+                <li className='max-left'>
+                  <Link to='/'>Smart Homes</Link>
+                </li>
+                <li className='max-left'>
+                  <Link to='/'>VR Gaming</Link>
                 </li>
               </ul>
             </div>
@@ -112,15 +126,16 @@ const Header: React.FC<Props> = () => {
               <ul>
                 <li className='max-right'>
                   <Link to='/'>
-                    <span>
-                      <img src={help} alt='help' />
+                    <span className='support'>
+                      <img src={support} alt='help' />
                       <span>Help</span>
                     </span>
                   </Link>
                 </li>
-                <li>
-                  <span>EN / USD</span>
+                <li className='laguage'>
                   <img src='./images/i-lang-1.png' alt='i-lang' />
+                  <span>EN / USD</span>
+                  <img src={dropdown} alt="dropdown" />
                 </li>
               </ul>
             </div>

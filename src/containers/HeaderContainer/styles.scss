@@ -107,9 +107,24 @@ i {
         div{
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
             img{
-                width: 50px;
+                width: 30px;
+            }
+        }
+    }
+
+    .customer-link{
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 30px;
             }
         }
     }
@@ -158,25 +173,56 @@ i {
 }
 
 .menu-left{
+    position: relative;
+
+    .menu-icons{
+        
+        img{
+            width: 40px;
+            transition: ease-in-out 0.2s;
+        }
+    }
 
     ul{
         display: flex;
-        flex-wrap: nowrap;
+        flex-direction: column;
         justify-content: right;
-        align-items: center;
+        position: absolute;
+
+        background-color: #ffff;
+        width: 300px;
+        top: 35px;
+        z-index: 100;
+
+        display: none;
+        overflow: hidden;
 
         li{
             list-style: none;
+            width: 100%;
+            padding: 10px 0;
+            transition: ease-in-out 0.2s;
             
+            display: flex;
+            flex-wrap: nowrap;
+            text-align: center;
+            padding-left: 10px;
+
+            Link{
+                color: #242424;
+            }
+
             a{
                 text-decoration: none;
-                color: #ffff;
+                // color: #ffff;
                 font-size: 16px;
                 font-weight: 500;
             }
-        }
-        .max-left{
-            margin-left: 30px;
+        }:hover{
+            background-color: #0a6cdc;
+            a{
+                color: #ffff;
+            }
         }
     }
 }
@@ -200,6 +246,31 @@ i {
         
         .max-right{
             margin-right: 30px;
+
+            .support{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    .laguage{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 20px;
+            margin-right: 2px;
+        }
+        span{
+            color: #ffff;
         }
     }
 }
