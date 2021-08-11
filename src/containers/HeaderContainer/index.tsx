@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import favorite from './favorite_border_black_24dp.svg';
 import signin from './perm_identity_black_24dp.svg';
 import cart from './shopping_cart_black_24dp.svg';
+import help from './help.svg';
 
 type Props = {};
 
@@ -110,14 +111,14 @@ const Header: React.FC<Props> = () => {
                 <li className='max-right'>
                   <Link to='/'>
                     <span>
-                      <i className='fa fa-user-circle-o' aria-hidden='true'></i>
+                      <img src={help} alt='help' />
                       <span>Help</span>
                     </span>
                   </Link>
                 </li>
                 <li>
                   <span>EN / USD</span>
-                  <i className='fa fa-angle-down' aria-hidden='true'></i>
+                  <img src='./images/i-lang-1.png' alt='i-lang' />
                 </li>
               </ul>
             </div>
