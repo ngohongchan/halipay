@@ -47,8 +47,10 @@ const Header: React.FC<Props> = () => {
                 </div>
                 <div className='header-wishlist'>
                   <Link to='/'>
-                    <img src={favorite} alt='wishlist' />
-                    <span>Wish Lists</span>
+                    <div>
+                      <img src={favorite} alt='wishlist' />
+                      <span>Wish Lists</span>
+                    </div>
                   </Link>
                 </div>
                 <div className='customer-link'>
