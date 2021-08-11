@@ -99,27 +99,21 @@ i {
     }
   }
 
-<<<<<<< HEAD
   .header-cart {
     .cart-list {
       display: flex;
       flex-direction: column;
     }
-=======
-    .header-wishlist{
-        
-        div{
-            display: flex;
-            flex-direction: column;
+    .header-wishlist {
+      div {
+        display: flex;
+        flex-direction: column;
 
-            img{
-                width: 50px;
-            }
+        img {
+          width: 50px;
         }
+      }
     }
-
-    .header-cart{
->>>>>>> master
 
     .cart-item {
       position: relative;
