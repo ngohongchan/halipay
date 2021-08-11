@@ -2,6 +2,10 @@ import React from 'react';
 import './styles.scss';
 import { Link } from 'react-router-dom';
 
+import favorite from './favorite_border_black_24dp.svg';
+import signin from './perm_identity_black_24dp.svg';
+import cart from './shopping_cart_black_24dp.svg';
+
 type Props = {};
 
 const Header: React.FC<Props> = () => {
@@ -42,14 +46,14 @@ const Header: React.FC<Props> = () => {
                 </div>
                 <div className='header-wishlist'>
                   <Link to='/'>
-                    <i className='fa fa-heart-o' aria-hidden='true'></i>
+                    <img src={favorite} alt='wishlist' />
                     <span>Wish Lists</span>
                   </Link>
                 </div>
                 <div className='customer-link'>
                   <Link to='/'>
                     <span>
-                      <i className='fa fa-user-o' aria-hidden='true'></i>
+                      <img src={signin} alt='signin' />
                     </span>
                     <span>Sign In</span>
                   </Link>
@@ -58,7 +62,7 @@ const Header: React.FC<Props> = () => {
                   <Link to='/'>
                     <span className='cart-list'>
                       <span>
-                        <i className='fa fa-cart-plus' aria-hidden='true'></i>
+                        <img src={cart} alt='cart' />
                       </span>
                       <span className='cart-item'>
                         <span className='cart-count'>0</span>
