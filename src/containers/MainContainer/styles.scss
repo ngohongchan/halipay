@@ -1,0 +1,16 @@
+.Wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.thumb-banner {
+  flex: 0 0 calc(100% - 52%);
+  max-width: calc(100% - 52%);
+  padding-left: 5px;
+  padding-right: 5px;
+  height: auto;
+  display: block;
+}
