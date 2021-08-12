@@ -1,16 +1,13 @@
 import './App.scss';
 import { Fragment } from 'react';
 import Header from './containers/HeaderContainer';
-import SideBar from './containers/SideBarContainer';
-import MainContainer from './components/MainComponent';
+import Main from './containers/MainContainer';
 
 function App() {
   return (
     <Fragment>
       <Header />
-      <MainContainer>
-        <SideBar />
-      </MainContainer>
+      <Main />
     </Fragment>
   );
 }
