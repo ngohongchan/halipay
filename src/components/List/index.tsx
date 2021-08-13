@@ -21,11 +21,9 @@ const List: React.FC<Props> = (props) => {
 
     return (
       <React.Fragment>
-        <div className='row'>
-          {props.items.map((item) => (
-            <ListItem key={`item-${item.id}`} item={item} />
-          ))}
-        </div>
+        {props.items.map((item) => (
+          <ListItem key={`item-${item.id}`} item={item} />
+        ))}
       </React.Fragment>
     );
   }

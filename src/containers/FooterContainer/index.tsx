@@ -5,11 +5,11 @@ import './style.scss';
 type Props = {};
 
 const Footer: React.FC<Props> = () => {
-    return (
-        <footer>
-            <Link to='/'>Hello</Link>
-        </footer>
-    );
+  return (
+    <footer>
+      <Link to='/'>Hello</Link>
+    </footer>
+  );
 };
 
 export default Footer;
