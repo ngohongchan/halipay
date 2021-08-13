@@ -1,0 +1,8 @@
+New branch git;
+- git checkout -b name
+- git add .
+- git commit -m ''
+- git push origin name
+
+- git checkout master
+- git pull origin master
