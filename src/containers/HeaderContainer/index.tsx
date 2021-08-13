@@ -6,6 +6,8 @@ import favorite from './favorite_border_black_24dp.svg';
 import signin from './perm_identity_black_24dp.svg';
 import cart from './shopping_cart_black_24dp.svg';
 import help from './help.svg';
+import list from './reorder_black_24dp.svg';
+import expand from './expand_more_black_24dp.svg';
 
 type Props = {};
 
@@ -15,12 +17,14 @@ const Header: React.FC<Props> = () => {
       <div className='header-top'>
         <div className='container'>
           <div className='row'>
-            <div>
+            <div className='logo-main'>
               <div className='header-logo'>
-                <img src='./images/ellamart.png' alt='header' />
+                <Link to='/'>
+                  <img src='./images/ellamart.png' alt='header' />
+                </Link>
               </div>
             </div>
-            <div>
+            <div className='nav-main'>
               <div className='nav-search'>
                 <div className='search-form'>
                   <form>
@@ -34,7 +38,7 @@ const Header: React.FC<Props> = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className='apend-main'>
               <div className='append'>
                 <div className='number-phone'>
                   <Link to='/'>
@@ -53,19 +57,19 @@ const Header: React.FC<Props> = () => {
                     </div>
                   </Link>
                 </div>
-                <div className='customer-link'>
+                <div className='header-wishlist'>
                   <Link to='/'>
-                    <span>
+                    <div>
                       <img src={signin} alt='signin' />
-                    </span>
-                    <span>Sign In</span>
+                      <span>Sign In</span>
+                    </div>
                   </Link>
                 </div>
                 <div className='header-cart'>
                   <Link to='/'>
                     <span className='cart-list'>
                       <span>
-                        <img src={cart} alt='cart' />
+                        <img className='cart-icon' src={cart} alt='cart' />
                       </span>
                       <span className='cart-item'>
                         <span className='cart-count'>0</span>
@@ -86,25 +90,32 @@ const Header: React.FC<Props> = () => {
             <div className='menu-left'>
               <ul>
                 <li>
-                  <Link to='/'>New In</Link>
-                </li>
-                <li className='max-left'>
-                  <Link to='/'>Must Have</Link>
-                </li>
-                <li className='max-left'>
-                  <Link to='/'>Trend</Link>
-                </li>
-                <li className='max-left'>
-                  <Link to='/'>Themes Demos</Link>
-                </li>
-                <li className='max-left'>
-                  <Link to='/'>Child Themes</Link>
-                </li>
-                <li className='max-left'>
-                  <Link to='/'>Pages</Link>
-                </li>
-                <li className='max-left'>
-                  <Link to='/'>BuyTheme</Link>
+                  <Link to='/'>
+                    <img className='menulist' src={list} alt='list' />
+                  </Link>
+                  <ul className='menu-dropdown'>
+                    <li>
+                      <Link to='/'>Sports</Link>
+                    </li>
+                    <li className='max-left'>
+                      <Link to='/'>Must Have</Link>
+                    </li>
+                    <li className='max-left'>
+                      <Link to='/'>Trend</Link>
+                    </li>
+                    <li className='max-left'>
+                      <Link to='/'>Themes Demos</Link>
+                    </li>
+                    <li className='max-left'>
+                      <Link to='/'>Child Themes</Link>
+                    </li>
+                    <li className='max-left'>
+                      <Link to='/'>Pages</Link>
+                    </li>
+                    <li className='max-left'>
+                      <Link to='/'>BuyTheme</Link>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>
@@ -112,15 +123,16 @@ const Header: React.FC<Props> = () => {
               <ul>
                 <li className='max-right'>
                   <Link to='/'>
-                    <span>
-                      <img src={help} alt='help' />
+                    <div>
+                      <img className='help' src={help} alt='help' />
                       <span>Help</span>
-                    </span>
+                    </div>
                   </Link>
                 </li>
-                <li>
-                  <span>EN / USD</span>
+                <li className='laguage'>
                   <img src='./images/i-lang-1.png' alt='i-lang' />
+                  <span>EN / USD</span>
+                  <img src={expand} alt='expand' />
                 </li>
               </ul>
             </div>
