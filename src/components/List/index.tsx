@@ -1,10 +1,10 @@
 import React from 'react';
 
 type Props = {
-  items?: { id: string }[];
+  items?: { _id: string }[];
   component: React.ComponentType<any>;
-  loading: React.ComponentType<any>;
-  error: React.ComponentType<any>;
+  loading?: boolean;
+  error?: string;
 };
 
 const List: React.FC<Props> = (props) => {
@@ -17,15 +17,13 @@ const List: React.FC<Props> = (props) => {
   }
 
   if (props.items?.length) {
-    const ListItem = props.component;
+    const ProductList = props.component;
 
     return (
       <React.Fragment>
-        <div className='row'>
-          {props.items.map((item) => (
-            <ListItem key={`item-${item.id}`} item={item} />
-          ))}
-        </div>
+        {props.items.map((item) => (
+          <ProductList key={`item-${item._id}`} item={item} />
+        ))}
       </React.Fragment>
     );
   }
