@@ -3,12 +3,14 @@ import { Fragment } from 'react';
 import Header from './containers/HeaderContainer';
 import Main from './containers/MainContainer/';
 import Footer from './containers/FooterContainer';
+import ProductPageContainer from './containers/ProductPageContainer';
 
 function App() {
   return (
     <Fragment>
       <Header />
       <Main />
+      <ProductPageContainer />
       <Footer />
     </Fragment>
   );
