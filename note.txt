@@ -1,0 +1,15 @@
+cách push code len git
+
+B1: git checkout -b ten_branch // muon đặt tên gì cũng đc // câu lệnh này dùng để tạo 1 nhánh 
+B2: git add . // câu lệnh này dùng để add tất cả các code mình đang làm leen git
+B3: git commit -m 'ten_gi_cung_dc' 
+B4: git push origin ten_branch // ten branch là tên mình vừa đã tạo lúc B1 đó
+
+b5: inbox tui chỉ làm tiếp theo
+
+
+// cách pull code lên git
+B1: git checkout master // khi mà muốn pull code về phải luôn luôn checkout về master lưu ý vấn đề này
+B2: git pull origin master
+
+// chú ý: cẩn thận làm đủ bước khi pull code về, luôn luôn phải checkout về master khi pull code về

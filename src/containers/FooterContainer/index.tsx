@@ -160,7 +160,7 @@ const Footer: React.FC<Props> = () => {
           </div>
 
           <div className='group-block'>
-            <img src='./images/layzyload.png' alt='' />
+            <img src='./images/1_x37.png' alt='' />
           </div>
         </div>
 
