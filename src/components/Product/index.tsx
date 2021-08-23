@@ -6,6 +6,7 @@ import './styles.scss';
 
 type Props = {
   item?: {
+    _id: string;
     image: string;
     name: string;
     price: number;
@@ -19,7 +20,7 @@ const Product: React.FC<Props> = ({ item }) => {
     <div className='column'>
       <div className='box'>
         <div className='productImage'>
-          <Link to='/'>
+          <Link to={`/product/${item?._id}`}>
             <img src={item?.image} alt='product' />
           </Link>
           <div className='product-label'>
