@@ -5,6 +5,8 @@ import Main from './containers/MainContainer/';
 import Footer from './containers/FooterContainer';
 import ProductPageContainer from './containers/ProductPageContainer';
 import ProductDetail from './containers/ProductDetail';
+import { Route, Switch } from 'react-router-dom';
+import MyCart from './containers/MyCartContainer';
 
 function App() {
   return (
@@ -12,7 +14,11 @@ function App() {
       <Header />
       {/* <Main /> */}
       {/* <ProductPageContainer /> */}
-      <ProductDetail />
+      <MyCart />
+      <Switch>
+        <Route path='/product/:id' component={ProductDetail} />
+      </Switch>
+      {/* <ProductDetail /> */}
       <Footer />
     </Fragment>
   );
