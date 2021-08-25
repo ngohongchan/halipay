@@ -10,12 +10,13 @@ type Props = {
     image: string;
     name: string;
     price: number;
-    rating: number;
+    rating?: number;
+    new: boolean;
+    sale: boolean;
   };
 };
 
 const Product: React.FC<Props> = ({ item }) => {
-  console.log({ item });
   return (
     <div className='column'>
       <div className='box'>
@@ -24,13 +25,13 @@ const Product: React.FC<Props> = ({ item }) => {
             <img src={item?.image} alt='product' />
           </Link>
           <div className='product-label'>
-            <span className='label label-sale'>Sale</span>
+            <span className={item?.new ? `label label-new` : `label label-sale`}>{item?.new ? 'New' : 'Sale'}</span>
           </div>
           <button className='btn-quickview'>Quick View</button>
         </div>
         <div className='content'>
           <Rating rating={item?.rating} />
-          <div className='title'>{item?.name.substring(1, 15)}...</div>
+          <div className='title'>{item?.name.substring(1, 25)}...</div>
           <div className='priceContainer'>
             <span className='price'>${item?.price}</span>
             from

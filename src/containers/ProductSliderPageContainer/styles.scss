@@ -1,0 +1,16 @@
+.row {
+  display: flex;
+  overflow: hidden;
+}
+
+.titleContainer {
+  width: 100%;
+  display: block;
+  padding-left: 15px;
+  margin-bottom: 20px;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 800;
+  }
+}

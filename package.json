@@ -40,7 +40,6 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^3.9.2",
     "eslint-webpack-plugin": "^2.5.2",
     "file-loader": "6.1.1",
@@ -97,7 +96,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "lint": "eslint --ext .js,.tsx ./src/",
-    "lint:fix": "eslint --fix --ext .js,.tsx src/",
+    "lint:fix": "eslint --fix --ext .js,.tsx,.ts src/",
     "prettier": "prettier --check \"src/**/(**.tsx|*.js|*.scss|*.css\"",
     "prettier:fix": "prettier --write \"src/**/(**.tsx|*.js|*.scss|*.css\""
   },
@@ -121,7 +120,8 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.8",
-    "@types/react-slick": "^0.23.5"
+    "@types/react-slick": "^0.23.5",
+    "eslint-plugin-react-hooks": "^4.2.0"
   },
   "jest": {
     "roots": [
