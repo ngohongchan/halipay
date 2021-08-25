@@ -1,0 +1,126 @@
+:root {
+    --colorBaner: #fd6506;
+    --fontsize: 14px;
+    --colortext: #ffffff;
+}
+
+header {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--colorBaner);
+
+    .row {
+        width: 100%;
+        padding: 18px 15px;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-logo {
+            img {
+                width: 150px;
+            }
+        }
+
+        .nav-menu {
+            width: 130px;
+        }
+
+        .nav-search {
+            width: 630px;
+
+            &__box {
+                width: 100%;
+                background-color: #ffffff;
+                border-radius: 30px;
+                overflow: hidden;
+
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+
+                .box__input {
+                    padding: 13px 18px;
+                    border: none;
+                    width: 85%;
+                    font-size: 14px;
+                }:focus{
+                    outline: none;
+                    // list-style: none;
+                }
+
+                .box__img {
+                    width: 23px;
+                    padding: 13px 18px;
+                }
+            }
+        }
+
+        .nav-item {
+            width: 350px;
+            
+            &__box{
+                width: 100%;
+
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+
+                div{
+
+                    a{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        text-decoration: none;
+
+                        img{
+                            width: 27px;
+                        }
+
+                        span{
+                            font-size: 14px;
+                            color: var(--colortext);
+                            padding-top: 7px;
+                        }
+                    }
+                }
+
+                .nav-cart{
+                    margin-right: 10px;
+                    a{
+                        position: relative;
+
+                        img{
+                            width: 50px;
+                        }
+
+                        span{
+                            position: absolute;
+                            padding: 5px 12px;
+                            background-color: #ffffff;
+                            color: #fd6506;
+
+                            font-size: 14px;
+                            font-weight: 400;
+                            border-radius: 15px;
+
+                            top: -10px;
+                            right: -10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

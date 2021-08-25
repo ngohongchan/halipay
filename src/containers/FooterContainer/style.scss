@@ -76,6 +76,7 @@ footer {
       }
 
       ul {
+        padding: 0;
         li {
           list-style: none;
           margin: 0px 0px 20px;
@@ -169,15 +170,17 @@ footer {
     width: 100%;
     background-color: #ffff;
     padding: 25px 0px 20px;
+    box-sizing: border-box;
 
     .row {
+      width: 100%;
       display: flex;
       flex-wrap: nowrap;
       justify-content: space-between;
-      align-items: center;
 
-      margin: 0px 60px;
+      align-items: center;
       padding: 0px 15px;
+      box-sizing: border-box;
 
       .footer-pay {
         ul {
@@ -190,22 +193,22 @@ footer {
             list-style: none;
             margin-left: 10px;
           }
-            // margin: 0px 60px;
-            padding: 0px 15px;
+          // margin: 0px 60px;
+          padding: 0px 15px;
 
-            .footer-pay{
-                ul{
-                    display: flex;
-                    flex-wrap: nowrap;
-                    justify-content: space-between;
-                    align-items: center;
+          .footer-pay {
+            ul {
+              display: flex;
+              flex-wrap: nowrap;
+              justify-content: space-between;
+              align-items: center;
 
-                    li{
-                        list-style: none;
-                        margin-left: 10px;
-                    }
-                }
+              li {
+                list-style: none;
+                margin-left: 10px;
+              }
             }
+          }
         }
       }
     }
