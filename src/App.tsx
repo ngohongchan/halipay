@@ -20,7 +20,7 @@ function App() {
         </Route>
         <Route exact path='/product/:id' component={ProductDetail} />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </Fragment>
   );
 }
