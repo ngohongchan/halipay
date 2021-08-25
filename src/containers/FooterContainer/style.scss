@@ -190,6 +190,22 @@ footer {
             list-style: none;
             margin-left: 10px;
           }
+            // margin: 0px 60px;
+            padding: 0px 15px;
+
+            .footer-pay{
+                ul{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    li{
+                        list-style: none;
+                        margin-left: 10px;
+                    }
+                }
+            }
         }
       }
     }
