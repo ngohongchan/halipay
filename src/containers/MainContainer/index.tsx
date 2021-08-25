@@ -5,6 +5,8 @@ import './styles.scss';
 import { imageSlider } from '../../data/slider';
 import SideBar from '../SideBarContainer';
 import Banner from '../BannerContainer';
+import Wideget from '../../components/Wideget';
+import CustomBanner from '../../components/Banner';
 
 type Props = {};
 
@@ -18,22 +20,29 @@ const Main: React.FC<Props> = () => {
 
   return (
     <div className='container'>
-      <div className='Wrapper'>
-        <SideBar />
-        <div className='thumb-banner'>
-          <SlicSlider {...settings}>
-            {imageSlider &&
-              imageSlider.map((image, idx) => {
-                return (
-                  <figure className='item' key={idx}>
-                    <img src={image.image} className='thumb-preview' alt={image.image} />
-                  </figure>
-                );
-              })}
-          </SlicSlider>
+      <Wideget width='100%'>
+        <div className='Wrapper'>
+          <SideBar />
+          <div className='thumb-banner'>
+            <SlicSlider {...settings}>
+              {imageSlider &&
+                imageSlider.map((image, idx) => {
+                  return (
+                    <figure className='item' key={idx}>
+                      <img src={image.image} className='thumb-preview' alt={image.image} />
+                    </figure>
+                  );
+                })}
+            </SlicSlider>
+          </div>
+          <Banner />
         </div>
-        <Banner />
-      </div>
+      </Wideget>
+      <Wideget width='100%'>
+        <div className='customBanner'>
+          <CustomBanner img='./images/custombanner.png' alt='custom banner' />
+        </div>
+      </Wideget>
     </div>
   );
 };

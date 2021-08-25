@@ -9,7 +9,6 @@ export const ProductList = () => {
       dispatch({ type: ProductTypes.PRODUCT_LIST_REQUEST });
 
       const { data } = await axios.get('https://node-halipay.herokuapp.com/api/products');
-      console.log(data);
       dispatch({ type: ProductTypes.PRODUCT_LIST_SUCCESS, payload: data });
     } catch (error) {
       dispatch({

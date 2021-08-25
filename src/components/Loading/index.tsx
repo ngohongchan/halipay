@@ -1,14 +1,14 @@
-import React from 'react';
-import Spinner from 'react-bootstrap/Spinner';
-
+import Loader from './Rolling-1s-200px.svg';
 import './styles.scss';
 
-type Props = {};
+type SpinnerProps = {};
 
-const Loading: React.FC<Props> = () => {
+const Loading: React.FC<SpinnerProps> = () => {
   return (
-    <div className='wrapper'>
-      <Spinner animation='border' variant='dark' />
+    <div className='loading'>
+      <div className='spinner-loading'>
+        <img src={Loader} alt='Loader' />
+      </div>
     </div>
   );
 };

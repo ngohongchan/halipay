@@ -17,7 +17,6 @@ const SideBar: React.FC<Props> = () => {
 
   const fetchApi = async () => {
     const data: any = await axios.get('https://node-halipay.herokuapp.com/api/category');
-    console.log(data);
 
     setCategory(data.data.categories);
   };
@@ -25,8 +24,6 @@ const SideBar: React.FC<Props> = () => {
   React.useEffect(() => {
     fetchApi();
   }, []);
-
-  console.log({ category });
 
   return (
     <div className='sidebarContainer'>

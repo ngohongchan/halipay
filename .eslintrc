@@ -1,6 +1,6 @@
 {
   "extends": ["react-app", "prettier"],
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "prettier", "react-hooks"],
   "rules": {
     "prettier/prettier": [
       "warn",
@@ -15,6 +15,8 @@
         "printWidth": 120,
         "jsxSingleQuote": true
       }
-    ]
+    ],
+    "react-hooks/rules-of-hooks": 0, // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
   }
 }

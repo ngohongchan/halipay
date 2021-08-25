@@ -1,0 +1,27 @@
+.WrapperContainer {
+  background-color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+    .title {
+      color: #e10600;
+
+      h1 {
+        font-size: 25px;
+        text-transform: capitalize;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  .body {
+    .row {
+      display: flex;
+    }
+  }
+}
