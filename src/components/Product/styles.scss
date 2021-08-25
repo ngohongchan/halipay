@@ -26,9 +26,12 @@ $text_new: #0a6dcd;
     position: relative;
     a {
       display: block;
+      width: 100%;
+      height: 250px;
 
       img {
         width: 100%;
+        height: 100%;
       }
     }
 
