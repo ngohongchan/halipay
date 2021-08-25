@@ -6,10 +6,12 @@ import ProductDetail from './containers/ProductDetail';
 import { Route, Switch } from 'react-router-dom';
 import ProductHorizontal from './containers/ProductHorizontal';
 import ProductPageContainer from './containers/ProductSliderPageContainer';
+import NavBarContainer from './containers/NavBarContainer';
 
 function App() {
   return (
     <Fragment>
+      <NavBarContainer />
       <Switch>
         <Route exact path='/'>
           <Main />
