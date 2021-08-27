@@ -8,6 +8,7 @@ import ProductHorizontal from './containers/ProductHorizontal';
 import ProductPageContainer from './containers/ProductSliderPageContainer';
 import NavBarContainer from './containers/NavBarContainer';
 import About from './containers/AboutContainer';
+import ProAjax from './containers/ProductAjaxContainer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         </Route>
         <Route exact path='/product/:id' component={ProductDetail} />
       </Switch>
+      <ProAjax />
       <About />
       <Footer />
     </Fragment>
