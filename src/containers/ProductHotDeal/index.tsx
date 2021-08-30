@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { ProductList } from '../../actions/products.actions';
+import { listProduct } from '../../actions/products.actions';
 
 import List from '../../components/List';
 import Product from '../../components/Product';
@@ -10,14 +10,14 @@ import './styles.scss';
 
 type Props = {};
 
-const ProductHorizontal: React.FC<Props> = () => {
+const ProductHotDeal: React.FC<Props> = () => {
   const dispatch = useDispatch();
   const productList = useSelector((state: any) => state.productList);
-  const { products, loading, error } = productList;
-  const productsSale = products?.filter((item: any) => item.sale).slice(0, 5);
+  const { loading, error, products } = productList;
+  const productsSale = products?.products?.filter((item: any) => item.sale).slice(0, 5) || null;
 
   React.useEffect(() => {
-    dispatch(ProductList());
+    dispatch(listProduct());
   }, [dispatch]);
 
   if (loading) {
@@ -37,12 +37,10 @@ const ProductHorizontal: React.FC<Props> = () => {
         <TimerContainer />
       </div>
       <div className='body'>
-        <div className='row'>
-          <List component={Product} items={productsSale} />
-        </div>
+        <div className='row'>{products && <List component={Product} items={productsSale} />}</div>
       </div>
     </div>
   );
 };
 
-export default ProductHorizontal;
+export default ProductHotDeal;

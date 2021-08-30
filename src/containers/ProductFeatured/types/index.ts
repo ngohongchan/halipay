@@ -1,4 +1,4 @@
-export type Product = {
+export type ProductType = {
   _id: string;
   sale: boolean;
   featured: boolean;
@@ -13,12 +13,5 @@ export type Product = {
   category: string;
   user: string;
   reviews: [];
+  rating?: number;
 };
-
-export interface ProductType {
-  loading: boolean;
-  error: string | null;
-  productSale: Product[];
-  productNew: Product[];
-  productFeatured: Product[];
-}

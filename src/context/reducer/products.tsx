@@ -19,11 +19,13 @@ const products_reducer = (state: ProductType, action: AdjustmentAction): Product
   if (action.type === GET_PRODUCTS_SUCCESS) {
     const productSale = action.payload.filter((product: Product) => product.sale);
     const productNew = action.payload.filter((product: Product) => product.new);
+    const productFeatured = action.payload.filter((product: Product) => product.featured);
     return {
       ...state,
       loading: false,
       productSale: productSale,
-      productNew: productNew
+      productNew: productNew,
+      productFeatured: productFeatured
     };
   }
 

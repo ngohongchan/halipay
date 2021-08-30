@@ -41,7 +41,7 @@ export const ProductReducer = (state: ProductState = initialState, action: AnyAc
         ...state,
         loading: false,
         error: null,
-        products: action.payload.products
+        products: action.payload
       };
     case ProductTypes.PRODUCT_LIST_FAIL:
       return {

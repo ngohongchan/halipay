@@ -1,45 +1,21 @@
 import React from 'react';
-import SlicSlider from '../../components/Slider';
 import './styles.scss';
 
-import { imageSlider } from '../../data/slider';
-import SideBar from '../SideBarContainer';
-import Banner from '../BannerContainer';
 import Wideget from '../../components/Wideget';
 import CustomBanner from '../../components/Banner';
 import ProductPageContainer from '../ProductSliderPageContainer';
-import ProductHorizontal from '../ProductHorizontal';
+import ProuctFeatured from '../ProductFeatured';
+import HomeContainer from '../HomeContainer';
+import ProductHotDeal from '../ProductHotDeal';
 
 type Props = {};
 
 const Main: React.FC<Props> = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
-
   return (
     <React.Fragment>
       <div className='container'>
         <Wideget width='100%'>
-          <div className='Wrapper'>
-            <SideBar />
-            <div className='thumb-banner'>
-              <SlicSlider {...settings}>
-                {imageSlider &&
-                  imageSlider.map((image, idx) => {
-                    return (
-                      <figure className='item' key={idx}>
-                        <img src={image.image} className='thumb-preview' alt={image.image} />
-                      </figure>
-                    );
-                  })}
-              </SlicSlider>
-            </div>
-            <Banner />
-          </div>
+          <HomeContainer />
         </Wideget>
         <Wideget width='100%'>
           <div className='customBanner'>
@@ -48,12 +24,13 @@ const Main: React.FC<Props> = () => {
         </Wideget>
       </div>
       <ProductPageContainer />
+      <ProuctFeatured />
       <Wideget width='100%'>
         <div className='customBanner'>
           <CustomBanner img='./images/banner-custom-middle-1.jpg' alt='custom banner' />
         </div>
       </Wideget>
-      <ProductHorizontal />
+      <ProductHotDeal />
     </React.Fragment>
   );
 };

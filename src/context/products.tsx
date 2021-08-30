@@ -14,7 +14,8 @@ const initialState: ProductType = {
   loading: false,
   error: null,
   productSale: [],
-  productNew: []
+  productNew: [],
+  productFeatured: []
 };
 
 const ProductContext = React.createContext<ProductContextType>(initialState as ProductContextType);

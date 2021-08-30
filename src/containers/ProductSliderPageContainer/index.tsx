@@ -12,6 +12,7 @@ type Props = {};
 
 const ProductPageContainer: React.FC<Props> = () => {
   const { loading, error, productSale, productNew } = useProductsContext();
+  // console.log({ productNew });
 
   const settings = {
     dots: false,
@@ -29,7 +30,7 @@ const ProductPageContainer: React.FC<Props> = () => {
   }
 
   return (
-    <section className='ProductSliderPageContainer'>
+    <div className='ProductSliderPageContainer'>
       <div className='row'>
         <Wideget width='50%'>
           <div className='titleContainer'>
@@ -49,7 +50,7 @@ const ProductPageContainer: React.FC<Props> = () => {
           </SlicSlider>
         </Wideget>
       </div>
-    </section>
+    </div>
   );
 };
 

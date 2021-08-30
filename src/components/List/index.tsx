@@ -5,6 +5,7 @@ type Props = {
   component: React.ComponentType<any>;
   loading?: boolean;
   error?: string;
+  width?: string;
 };
 
 const List: React.FC<Props> = (props) => {
@@ -22,7 +23,7 @@ const List: React.FC<Props> = (props) => {
     return (
       <React.Fragment>
         {props.items.map((item) => (
-          <ProductList key={`item-${item._id}`} item={item} />
+          <ProductList key={`item-${item._id}`} item={item} width={props.width} />
         ))}
       </React.Fragment>
     );
