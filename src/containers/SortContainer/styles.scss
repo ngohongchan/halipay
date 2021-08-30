@@ -1,0 +1,123 @@
+.appendTo-toolbar {
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.tool-bar {
+  display: flex;
+  justify-content: space-between;
+
+  .column-left,
+  .column-right {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.filters-toolbar-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .label-page {
+    font-weight: 700;
+    margin-right: 20px;
+  }
+
+  .custom-dropdown {
+    min-width: 180px;
+    position: relative;
+
+    .label-tab {
+      width: 100%;
+      border: 1px solid #ccc;
+      padding: 7px 20px 7px 20px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+
+      span {
+        color: black;
+      }
+    }
+
+    .dropdown-menu {
+      display: none;
+      z-index: 100;
+      position: absolute;
+      transform: translate3d(0px, 35px, 0px);
+      top: 0px;
+      left: 0px;
+      will-change: transform;
+      padding: 5px 0;
+      margin: 2px 0;
+      right: 0;
+      border-radius: 0;
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      background: white;
+
+      li {
+        margin-bottom: 0.25em;
+        list-style-type: none;
+        &:hover {
+          background-color: #f4f4f4;
+          color: #66787f;
+        }
+        span {
+          color: #505050;
+          display: block;
+          padding: 4px 14px 3px 15px;
+          cursor: pointer;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    .show {
+      display: block;
+    }
+  }
+
+  .gridContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .btn-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 0.5rem;
+      text-align: right;
+      button {
+        background: transparent;
+        border: 1px solid #222;
+        color: #222;
+        width: 30px;
+        border-radius: var(--radius);
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        svg {
+          font-size: 1rem;
+        }
+      }
+      .active {
+        background: #222;
+        color: #ffffff;
+      }
+    }
+  }
+}

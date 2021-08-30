@@ -1,0 +1,39 @@
+.wrapper {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.customBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0 35px 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+.filter-category {
+  .row {
+    .col-4 {
+      width: 15%;
+
+      .title {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+
+    .col-8 {
+      width: 85%;
+
+      .row {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

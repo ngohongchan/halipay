@@ -14,11 +14,12 @@ type Props = {
     new: boolean;
     sale: boolean;
   };
+  width?: string;
 };
 
-const Product: React.FC<Props> = ({ item }) => {
+const Product: React.FC<Props> = ({ item, width }) => {
   return (
-    <div className='column'>
+    <div className='column' style={{ width: width }}>
       <div className='box'>
         <div className='productImage'>
           <Link to={`/product/${item?._id}`}>

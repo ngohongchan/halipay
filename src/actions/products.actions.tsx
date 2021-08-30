@@ -3,13 +3,20 @@ import { Dispatch } from 'react';
 import { AnyAction } from 'redux';
 import { ProductTypes } from '../actions-types/products.types';
 
-export const ProductList = () => {
+export const listProduct = (page = 1, category?: string) => {
   return async (dispatch: Dispatch<AnyAction>) => {
     try {
       dispatch({ type: ProductTypes.PRODUCT_LIST_REQUEST });
 
-      const { data } = await axios.get('https://node-halipay.herokuapp.com/api/products');
-      dispatch({ type: ProductTypes.PRODUCT_LIST_SUCCESS, payload: data });
+      let response;
+
+      response = await axios.get(`https://node-halipay.herokuapp.com/api/products?page=${page}`);
+
+      if (category) {
+        response = await axios.get(`https://node-halipay.herokuapp.com/api/products?page=${page}&category=${category}`);
+      }
+
+      dispatch({ type: ProductTypes.PRODUCT_LIST_SUCCESS, payload: response.data });
     } catch (error) {
       dispatch({
         type: ProductTypes.PRODUCT_LIST_FAIL,
