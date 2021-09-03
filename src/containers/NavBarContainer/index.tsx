@@ -1,18 +1,33 @@
 import { type } from 'os';
 import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.scss';
+
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import { IconContext } from 'react-icons';
+
+// import './Navbar.css';
+
+
 
 import heart from './icons-heart.svg';
 import user from './icons-user.svg';
 import gift from './icons-gift.svg';
 import cart from './icons-cart.svg';
 import search from './icons-search.svg';
-import list from './icons-list.svg';
+import { SidebarData } from './SidebarData';
+// import list from './icons-list.svg';
+// import Navbar from './Navbar';
 
 type Props = {};
 
 const NavBarContainer: React.FC<Props> = () => {
+  const [sidebar, setSidebar] = useState(false);
+
+  const showSidebar = () => setSidebar(!sidebar);
+
   return (
     <header>
       <div className='row'>
@@ -23,7 +38,33 @@ const NavBarContainer: React.FC<Props> = () => {
         </div>
 
         <div className='nav-menu'>
-          <img src={list} alt='' />
+          <IconContext.Provider value={{ color: '#fff' }}>
+            <div className='navbar'>
+              <Link to='/'>
+                <FaIcons.FaBars className='list' onClick={showSidebar} />
+              </Link>
+            </div>
+
+            <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+              <ul className='nav-menu-item' onClick={showSidebar}>
+                <li className='navbar-toggle'>
+                  <Link to='/' className='menu-bars'>
+                    <AiIcons.AiOutlineClose />
+                  </Link>
+                </li>
+                {SidebarData.map((item, index) => {
+                  return (
+                    <li key={index} className={item.cName}>
+                      <Link to={item.path}>
+                        {item.icon}
+                        <span>{item.title}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </IconContext.Provider>
         </div>
 
         <div className='nav-search'>
