@@ -11,7 +11,7 @@
     outline: 0;
     background-color: #232323cc;
 
-    // display: none;
+    display: none;
 
     .pro-ajax-body {
         position: auto;
@@ -51,7 +51,7 @@
                 justify-content: space-between;
                 align-items: center;
 
-                img{
+                img {
                     width: 68px;
                 }
             }
@@ -61,14 +61,14 @@
             width: 55%;
             padding: 0px 15px;
 
-            &____headertext{
+            &____headertext {
                 width: 100%;
                 font-size: 14px;
                 font-weight: 800;
                 color: #202020;
             }
 
-            &__vote{
+            &__vote {
                 width: 100%;
 
                 display: flex;
@@ -76,7 +76,7 @@
                 justify-content: space-between;
                 align-items: center;
 
-                span{
+                span {
                     width: 100%;
 
                     display: flex;
@@ -84,22 +84,22 @@
                     justify-content: left;
                     align-items: center;
 
-                    img{
+                    img {
                         width: 16px;
                         margin-right: 10px;
                     }
 
-                    span{
+                    span {
                         color: #505050;
                         font-size: 14px;
                     }
                 }
             }
 
-            &__type{
+            &__type {
                 width: 100%;
 
-                dl{
+                dl {
                     width: 100%;
 
                     display: flex;
@@ -107,42 +107,42 @@
                     justify-content: left;
                     align-items: center;
 
-                    dt{
+                    dt {
                         width: 110px;
                         color: #808080;
                     }
                 }
             }
 
-            &__price{
+            &__price {
                 width: 100%;
 
-                span{
+                span {
                     font-size: 20px;
                     font-weight: 800;
                     color: #e10600;
                 }
             }
 
-            &__deception{
+            &__deception {
                 width: 100%;
 
-                p{
+                p {
                     color: #808080;
                     font-size: 14px;
-                };
+                }
             }
 
-            &__size{
+            &__size {
                 width: 100%;
 
                 display: flex;
                 flex-direction: column;
-                div{
+                div {
                     margin-bottom: 10px;
                 }
-                
-                .size-mini{
+
+                .size-mini {
                     width: 100%;
 
                     display: flex;
@@ -150,11 +150,11 @@
                     justify-content: space-between;
                     align-items: center;
 
-                    span{
+                    span {
                         color: #505050;
                     }
 
-                    div{
+                    div {
                         width: 80px;
                         height: 40px;
 
@@ -169,40 +169,38 @@
                 }
             }
 
-            &__quantity{
+            &__quantity {
                 width: 100%;
 
-                .quantity-box{
+                .quantity-box {
                     display: flex;
                     flex-direction: column;
-                    
-                    span{
+
+                    span {
                         font-size: 16px;
                         color: #202020;
                         font-weight: 600;
                     }
 
-                    div{
+                    div {
                         display: flex;
                         flex-wrap: nowrap;
                         justify-content: left;
                         align-items: center;
 
-                        span{
+                        span {
                             padding: 7px 15px;
                             border: solid 0.5px #808080;
                         }
 
-                        .quantity-number{
+                        .quantity-number {
                             padding: 7px 25px;
                         }
                     }
-
                 }
-
             }
 
-            &__addcart{
+            &__addcart {
                 width: 100%;
 
                 display: flex;
@@ -212,7 +210,7 @@
 
                 margin: 15px 0px;
 
-                input{
+                input {
                     padding: 20px 100px;
                     border-radius: 30px;
                     border: none;
@@ -223,7 +221,7 @@
                     font-weight: 700;
                 }
 
-                a{
+                a {
                     width: 60px;
                     height: 60px;
                     border: solid 0.5px #808080;
@@ -236,18 +234,17 @@
                 }
             }
 
-            &__notes{
+            &__notes {
                 display: flex;
                 flex-wrap: nowrap;
                 justify-content: left;
                 align-items: center;
 
-                span{
+                span {
                     font-size: 14px;
                     margin-left: 10px;
                     color: #808080;
                 }
-
             }
         }
     }

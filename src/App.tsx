@@ -7,6 +7,7 @@ import { Route, Switch } from 'react-router-dom';
 import NavBarContainer from './containers/NavBarContainer';
 // import About from './containers/AboutContainer';
 import ProductsList from './containers/ProductListContainer';
+import ProAjax from './containers/ProductAjaxContainer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/products' component={ProductsList} />
       </Switch>
       {/* <About /> */}
+      <ProAjax />
       <Footer />
     </Fragment>
   );
