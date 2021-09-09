@@ -49,7 +49,7 @@ const NavBarContainer: React.FC<Props> = () => {
               <ul className='nav-menu-item' onClick={showSidebar}>
                 <li className='navbar-toggle'>
                   <Link to='/' className='menu-bars'>
-                    <AiIcons.AiOutlineClose />
+                    <AiIcons.AiOutlineClose className='menu-bars-icon' />
                   </Link>
                 </li>
                 {SidebarData.map((item, index) => {
@@ -77,25 +77,50 @@ const NavBarContainer: React.FC<Props> = () => {
         <div className='nav-item'>
           <div className='nav-item__box'>
             <div>
-              <Link to='/'>
+              <Link to='/' className='box-link'>
                 <img src={heart} alt='' />
                 <span>Wish Lists</span>
               </Link>
             </div>
             <div>
-              <Link to='/'>
+              <Link to='/' className='box-link'>
                 <img src={gift} alt='' />
                 <span>Gift Cards</span>
               </Link>
             </div>
             <div>
-              <Link to='/'>
+              <Link to='/' className='box-link'>
                 <img src={user} alt='' />
                 <span>Sign In</span>
               </Link>
+
+              <ul className='signin-bars'>
+                <li className='signin-toggle li-back'>
+                  <Link to='/' className='sing-boxs' >
+                    <span>Đăng Nhập</span>
+                  </Link>
+                </li>
+                <li className='signin-toggle li-back'>
+                  <Link to='/' className='sing-boxs' >
+                    <span>Đăng Ký</span>
+                  </Link>
+                </li>
+                <li className='signin-toggle toggole1'>
+                  <Link to='/' className='sign-box ' >
+                    <FaIcons.FaFacebookF className='icons-facebook' />
+                    <span>Đăng Nhập Facebook</span>
+                  </Link>
+                </li>
+                <li className='signin-toggle toggole2'>
+                  <Link to='/' className='sign-box ' >
+                    <FaIcons.FaGooglePlusG className='icons-google' />
+                    <span>Đăng Nhập Google</span>
+                  </Link>
+                </li>
+              </ul>
             </div>
             <div className='nav-cart'>
-              <Link to='/'>
+              <Link to='/' className='box-link'>
                 <img src={cart} alt='' />
                 <span>1</span>
               </Link>
